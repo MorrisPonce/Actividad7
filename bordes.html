@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Bordes </title>
+	<link rel="stylesheet" href="CSS/bordes.css">
+</head>
+	<body>
+		<header><h1> Bordes </h1>
+		    <p> Rodriguez Ponce Aldo Andres </p> 
+            <p> EVN 305</p>
+        </header>
+			<figure>
+			<img id="minecraft" src="mine3.jpg" style=" border-style: solid; border-color: rgb(0,0,0);" title="Borde solido, negro" width="600">
+			</figure>
+			<form name="formu">
+				<input type="button" value="Cambiar el borde a 10px" onclick="setBorderWidth(10);">
+				<input type="button" value="Cambiar el borde a 20px" onclick="setBorderWidth(20);">
+				<input type="button" value="Cambiar el borde a 25px" onclick="setBorderWidth(25);">
+				<input type="button" value="Cambiar el borde a 30px" onclick="setBorderWidth(30);">
+				<input type="color" name="colorB" id="colorB" onchange="document.getElementById('minecraft').style.borderColor=this.value"> 
+			</form>
+			<br>
+			<input type="radio" name="tipo" value="solid" onchange="document.getElementById('minecraft').style.borderStyle=this.value"> "Solido"
+			<input type="radio" name="tipo" value="dashed" onchange="document.getElementById('minecraft').style.borderStyle=this.value"> "Punteado"
+			<input type="radio" name="tipo" value="double" onchange="document.getElementById('minecraft').style.borderStyle=this.value"> "Doble linea"
+			<script type="text/javascript">
+				function setBorderWidth(x){
+				document.getElementById("minecraft").style.borderWidth=x+"px";
+				}
+				function changeColor(id){
+					id.innerHTML=colorB;
+				}
+			</script>
+
+	</body>
+</html>

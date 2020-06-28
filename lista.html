@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Lista </title>
+	<link rel="stylesheet" href="CSS/lista.css">
+</head>
+<body>
+	<header> <h1> Agregar opcion </h1>
+            <p> Rodriguez Ponce Aldo Andres </p> 
+            <p> EVN 305</p>
+	</header>
+	<section >
+		<ol id="lista">
+			<li> Opcion 1</li>
+			<li> Opcion 2</li>
+			<li> Opcion 3</li>
+			<li> Opcion 4</li>
+		</ol>
+	</section>
+		<button type="button" onclick="agregar();"> Agregar opcion </button>
+	<script type="text/javascript">
+		var i=5;
+		function agregar(){
+			var element=document.createElement("li");
+			var texto=document.createTextNode("Opcion "+ i);
+			element.appendChild(texto);
+			var lista=document.getElementById('lista');
+			lista.appendChild(element);
+
+			i++;
+		}
+
+	</script>
+
+</body>
+</html>
